@@ -97,7 +97,7 @@ app.post('/api/login', async (req, res) => {
                     const token = jwt.sign(
                         { email: user.email, userId: user.id },
                         secretKey,
-                        { expiresIn: '1m' }
+                        { expiresIn: '3m' }
                     );
 
                     res.json({
@@ -144,7 +144,7 @@ app.post('/api/refreshToken', async (req, res) => {
         const newAccessToken = jwt.sign(
             { email: decoded.email, userId: decoded.userId },
             secretKey,
-            { expiresIn: '5m' }
+            { expiresIn: '3m' }
         );
         res.json({ success: true, message: 'Token refreshed successfully', accessToken: newAccessToken });
     } catch (error) {
