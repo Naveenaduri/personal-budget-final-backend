@@ -37,7 +37,7 @@ This Node.js backend, built with Express and MySQL, provides user authentication
 ## MySQL Deployment
 The backend assumes MySQL is installed on the same system. Modify MySQL connection details in `app.js` accordingly.
 
-## Test Cases
+## Unit Test Cases
 1. **Successful Signup**
    - Verifies the successful creation of a new user.
 
